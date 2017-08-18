@@ -20,7 +20,7 @@ import MusicTab from './MusicTab';
 
 export default class HomePage extends Component {
     static defaultProps = {
-        selectedColor: 'rgb(22,131,251)',
+        selectedColor: '#1683FB',
         normalColor: '#a9a9a9',
     };
 
