@@ -85,8 +85,8 @@ export default class BookTab extends Component {
         return (
             <View style={styles.loading}>
                 <Image
-                    source={require('../image/starting.gif')}
-                />
+                    source={require('../image/loading.gif')}
+                    style={{height:200,width:200}}/>
             </View>
         );
     }

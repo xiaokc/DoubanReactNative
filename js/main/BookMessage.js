@@ -13,11 +13,11 @@ import {
     Image,
     ListView,
     TouchableOpacity,
-    Navigator,
     ScrollView,
     Button,
     BackHandler
 }from 'react-native';
+import {Navigator} from 'react-native-deprecated-custom-components';
 
 import Detail from './Detail';
 
