@@ -9,6 +9,7 @@ import {
     Text,
     View,
     Image,
+    BackHandler,
 } from 'react-native';
 import {Navigator} from 'react-native-deprecated-custom-components';
 import Icon from 'react-native-vector-icons/Ionicons';
@@ -39,6 +40,14 @@ export default class HomePage extends Component {
         Icon.getImageSource('md-book', 50, selectedColor).then((source) => this.setState({bookSelected: source}));
         Icon.getImageSource('md-musical-notes', 50, normalColor).then((source) => this.setState({musicNormal: source}));
         Icon.getImageSource('md-musical-notes', 50, selectedColor).then((source) => this.setState({musicSelected: source}));
+    }
+
+    componentDidMount(){
+        BackHandler.addEventListener('hardwareBackPress', this._back.bind(this));
+    }
+
+    _back(){
+        BackHandler.exitApp();
     }
 
     render() {
